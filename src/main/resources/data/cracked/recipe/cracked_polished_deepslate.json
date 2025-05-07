@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:polished_deepslate"
+  },
+  "result": {
+    "id": "cracked:cracked_polished_deepslate"
+  },
+  "experience": 3,
+  "cookingtime": 200
+}

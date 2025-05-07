@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:polished_tuff"
+  },
+  "result": {
+    "id": "cracked:cracked_polished_tuff"
+  },
+  "experience": 3,
+  "cookingtime": 200
+}
