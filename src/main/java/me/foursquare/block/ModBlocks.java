@@ -16,16 +16,14 @@ public class ModBlocks {
     public static final Block CRACKED_POLISHED_DEEPSLATE = registerBlock("cracked_polished_deepslate",
             new Block(AbstractBlock.Settings.create().hardness(2.5f).strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
-
     public static final Block CRACKED_POLISHED_TUFF = registerBlock("cracked_polished_tuff",
-            new Block(AbstractBlock.Settings.create().hardness(1.5f).strength(46f)
+            new Block(AbstractBlock.Settings.create().hardness(1.5f).strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Cracked.MOD_ID, name), block);
     }
-
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(Cracked.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));

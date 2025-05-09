@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "ingredient": {
+    "item": "minecraft:polished_deepslate"
+  },
+  "result": {
+    "id": "cracked:cracked_polished_deepslate"
+  },
+  "experience": 0.3,
+  "cookingtime": 150
+}
