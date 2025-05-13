@@ -1,6 +1,7 @@
 package me.foursquare.item;
 
 import me.foursquare.Cracked;
+import me.foursquare.item.custom.FracturerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -9,7 +10,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item FRACTURER = registerItem("fracturer", new Item(new Item.Settings()));
+    public static final Item FRACTURER = registerItem("fracturer", new FracturerItem(new Item.Settings().maxDamage(250)));
+
 
 
     private static Item registerItem(String name, Item item) {
