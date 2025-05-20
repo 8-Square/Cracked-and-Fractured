@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cracked:cracked_polished_deepslate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "cracked:fragment_deepslate_stonecutting"
+    ]
+  }
+}

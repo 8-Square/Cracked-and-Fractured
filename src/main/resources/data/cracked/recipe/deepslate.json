@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cracked:deepslate_fragment"
+    },
+    {
+      "item": "cracked:deepslate_fragment"
+    },
+    {
+      "item": "cracked:deepslate_fragment"
+    },
+    {
+      "item": "cracked:deepslate_fragment"
+    }
+  ],
+  "result": {
+    "id": "minecraft:deepslate",
+    "count": 1
+  }
+}

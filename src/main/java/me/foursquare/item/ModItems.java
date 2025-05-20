@@ -12,6 +12,8 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item FRACTURER = registerItem("fracturer", new FracturerItem(new Item.Settings().maxDamage(250)));
 
+    public static final Item DEEPSLATE_FRAGMENT = registerItem("deepslate_fragment", new Item(new Item.Settings()));
+    public static final Item TUFF_FRAGMENT = registerItem("tuff_fragment", new Item(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -23,6 +25,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(FRACTURER);
+        } );
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(DEEPSLATE_FRAGMENT);
+            entries.add(TUFF_FRAGMENT);
         } );
     }
 }

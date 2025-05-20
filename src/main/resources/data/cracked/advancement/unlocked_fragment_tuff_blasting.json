@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cracked:cracked_polished_tuff"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "cracked:fragment_tuff_blasting"
+    ]
+  }
+}

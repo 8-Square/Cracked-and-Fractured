@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cracked:tuff_fragment"
+    },
+    {
+      "item": "cracked:tuff_fragment"
+    },
+    {
+      "item": "cracked:tuff_fragment"
+    },
+    {
+      "item": "cracked:tuff_fragment"
+    }
+  ],
+  "result": {
+    "id": "minecraft:tuff",
+    "count": 1
+  }
+}
