@@ -22,8 +22,8 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF)));
 
     public static final Block CRACKED_POLISHED_DEEPSLATE = registerBlock("cracked_polished_deepslate",
-            new CrackedPolishedDeepslate(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE).hardness(3.5f).strength(6f).requiresTool()
-                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE)));
+            new CrackedPolishedDeepslate(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE).hardness(3.5f)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
