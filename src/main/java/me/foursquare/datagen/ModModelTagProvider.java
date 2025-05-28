@@ -24,7 +24,9 @@ public class ModModelTagProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DEEPSLATE_FRAGMENT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUFF_FRAGMENT, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.FRACTURER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STONE_FRACTURER, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.IRON_FRACTURER, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DIAMOND_FRACTURER, Models.HANDHELD);
 
     }
 }

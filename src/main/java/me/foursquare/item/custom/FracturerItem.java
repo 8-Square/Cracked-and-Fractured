@@ -1,11 +1,15 @@
 package me.foursquare.item.custom;
 
 import me.foursquare.block.ModBlocks;
+import net.fabricmc.fabric.api.item.v1.EnchantingContext;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.*;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -15,15 +19,14 @@ import net.minecraft.world.World;
 
 import java.util.Map;
 
-public class FracturerItem extends Item {
+public class FracturerItem extends MiningToolItem {
     private static final Map<Block, Block> CHISEL_MAP =
             Map.of(
-                    Blocks.DEEPSLATE, Blocks.COBBLED_DEEPSLATE,
                     Blocks.POLISHED_DEEPSLATE, ModBlocks.CRACKED_POLISHED_DEEPSLATE,
                     Blocks.POLISHED_TUFF, ModBlocks.CRACKED_POLISHED_TUFF
             );
-    public FracturerItem(Settings settings) {
-        super(settings);
+    public FracturerItem(ToolMaterial material, Settings settings) {
+        super(material, BlockTags.PICKAXE_MINEABLE , settings);
     }
 
 
@@ -39,10 +42,19 @@ public class FracturerItem extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_DEEPSLATE_BREAK, SoundCategory.BLOCKS);
+                world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_DEEPSLATE_BREAK,
+                        SoundCategory.BLOCKS);
 
             }
         }
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public boolean canBeEnchantedWith(ItemStack stack, RegistryEntry<Enchantment> enchantment, EnchantingContext context) {
+        if (enchantment.equals(Enchantments.SILK_TOUCH)) {
+            return false;
+        }
+        return super.canBeEnchantedWith(stack, enchantment, context);
     }
 }

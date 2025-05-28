@@ -1,5 +1,8 @@
 {
-  "item.cracked.fracturer": "Fracturer",
+  "item.cracked.stone_fracturer": "Stone Fracturer",
+  "item.cracked.iron_fracturer": "Iron Fracturer",
+  "item.cracked.diamond_fracturer":"Diamond Fracturer",
+
   "item.cracked.deepslate_fragment": "Deepslate Fragment",
   "item.cracked.tuff_fragment": "Tuff Fragment",
 

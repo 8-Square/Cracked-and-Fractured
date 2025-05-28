@@ -7,14 +7,14 @@
   ],
   "key": {
     "I": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:diamond"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "id": "cracked:fracturer",
+    "id": "cracked:diamond_fracturer",
     "count": 1
   }
 }

@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:stone_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "cracked:stone_fracturer"
+    ]
+  }
+}
