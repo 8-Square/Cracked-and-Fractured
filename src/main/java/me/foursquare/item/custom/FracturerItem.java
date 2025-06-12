@@ -23,8 +23,13 @@ public class FracturerItem extends MiningToolItem {
     private static final Map<Block, Block> CHISEL_MAP =
             Map.of(
                     Blocks.POLISHED_DEEPSLATE, ModBlocks.CRACKED_POLISHED_DEEPSLATE,
-                    Blocks.POLISHED_TUFF, ModBlocks.CRACKED_POLISHED_TUFF
-            );
+                    Blocks.POLISHED_TUFF, ModBlocks.CRACKED_POLISHED_TUFF,
+                    Blocks.DEEPSLATE_TILES, Blocks.CRACKED_DEEPSLATE_TILES,
+                    Blocks.NETHER_BRICKS, Blocks.CRACKED_NETHER_BRICKS,
+                    Blocks.DEEPSLATE_BRICKS, Blocks.CRACKED_DEEPSLATE_BRICKS,
+                    Blocks.POLISHED_BLACKSTONE_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS,
+                    Blocks.STONE_BRICKS, Blocks.CRACKED_STONE_BRICKS
+                    );
     public FracturerItem(ToolMaterial material, Settings settings) {
         super(material, BlockTags.PICKAXE_MINEABLE , settings);
     }

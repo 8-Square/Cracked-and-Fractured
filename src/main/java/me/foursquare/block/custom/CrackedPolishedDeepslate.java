@@ -37,5 +37,4 @@ public class CrackedPolishedDeepslate extends Block {
             return ItemActionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
         }
     }
-
 }
