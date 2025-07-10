@@ -1,8 +1,6 @@
 package me.foursquare.block;
 
 import me.foursquare.Cracked;
-import me.foursquare.block.custom.CrackedPolishedDeepslate;
-import me.foursquare.block.custom.CrackedPolishedTuff;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -17,12 +15,12 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block CRACKED_POLISHED_TUFF = registerBlock("cracked_polished_tuff",
-            new CrackedPolishedTuff(AbstractBlock.Settings.copy(Blocks.POLISHED_TUFF).hardness(1.5f).strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF)));
 
+    public static final Block CRACKED_POLISHED_TUFF = registerBlock("cracked_polished_tuff",
+            new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_TUFF).hardness(1.5f)
+                    .strength(4f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF)));
     public static final Block CRACKED_POLISHED_DEEPSLATE = registerBlock("cracked_polished_deepslate",
-            new CrackedPolishedDeepslate(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE).hardness(3.5f)
+            new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE).hardness(3.5f)
                     .strength(6f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE)));
 
     private static Block registerBlock(String name, Block block) {

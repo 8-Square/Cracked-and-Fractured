@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class FracturerItem extends MiningToolItem {
-    private static final Map<Block, Block> CHISEL_MAP =
+    public static final Map<Block, Block> FRACTURER_MAP =
             Map.of(
                     Blocks.POLISHED_DEEPSLATE, ModBlocks.CRACKED_POLISHED_DEEPSLATE,
                     Blocks.POLISHED_TUFF, ModBlocks.CRACKED_POLISHED_TUFF,
@@ -40,9 +40,9 @@ public class FracturerItem extends MiningToolItem {
         World world = context.getWorld();
         Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
 
-        if(CHISEL_MAP.containsKey(clickedBlock)) {
+        if(FRACTURER_MAP.containsKey(clickedBlock)) {
             if(!world.isClient()) {
-                world.setBlockState(context.getBlockPos(), CHISEL_MAP.get(clickedBlock).getDefaultState());
+                world.setBlockState(context.getBlockPos(), FRACTURER_MAP.get(clickedBlock).getDefaultState());
 
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
