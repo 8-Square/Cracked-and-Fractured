@@ -30,6 +30,8 @@ public class ModItems {
                 new FragmentItem(new Item.Settings()));
         public static final Item TUFF_FRAGMENT = registerItem("tuff_fragment",
             new FragmentItem(new Item.Settings()));
+    public static final Item BRICK_FRAGMENT = registerItem("brick_fragment",
+            new FragmentItem(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -47,6 +49,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(DEEPSLATE_FRAGMENT);
             entries.add(TUFF_FRAGMENT);
+            entries.add(BRICK_FRAGMENT);
         } );
     }
 }

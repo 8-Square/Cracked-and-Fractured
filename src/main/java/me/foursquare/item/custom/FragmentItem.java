@@ -6,6 +6,8 @@ import me.foursquare.block.ModBlocks;
 import me.foursquare.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
@@ -27,6 +29,10 @@ public class FragmentItem extends Item {
 
     private final Map<Block, Block> TUFF_FRAGMENTED = Map.of(
             ModBlocks.CRACKED_POLISHED_TUFF, Blocks.POLISHED_TUFF
+    );
+
+    private final Map<Block, Block> BRICK_FRAGMENTED = Map.of(
+            ModBlocks.CRACKED_BRICKS, Blocks.BRICKS
     );
 
 
@@ -71,6 +77,23 @@ public class FragmentItem extends Item {
                     world.playSound(null, pos, SoundEvents.BLOCK_POLISHED_DEEPSLATE_BREAK, SoundCategory.BLOCKS, 1f, 1f);
                     world.playSound(null, pos, SoundEvents.BLOCK_STONE_BREAK, SoundCategory.BLOCKS, 1f, 1f);
                     world.playSound(null, pos, SoundEvents.BLOCK_DEEPSLATE_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                    context.getStack().decrement(1);
+                }
+                return ActionResult.SUCCESS;
+            }
+            //BRICK FRAGMENT
+            else if (getDefaultStack().isOf(ModItems.BRICK_FRAGMENT)) {
+                if (BRICK_FRAGMENTED.containsKey(clickedBlock)) {
+                    world.setBlockState(pos, BRICK_FRAGMENTED.get(clickedBlock).getDefaultState());
+                    world.playSound(null, pos, SoundEvents.BLOCK_DEEPSLATE_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_BASALT_STEP, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_BASALT_STEP, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_DEEPSLATE_BRICKS_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_ANCIENT_DEBRIS_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_METAL_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_METAL_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                    world.playSound(null, pos, SoundEvents.BLOCK_METAL_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+
                     context.getStack().decrement(1);
                 }
                 return ActionResult.SUCCESS;

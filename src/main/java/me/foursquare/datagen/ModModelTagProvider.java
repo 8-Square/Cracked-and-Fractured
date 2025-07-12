@@ -17,12 +17,14 @@ public class ModModelTagProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_POLISHED_TUFF);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_POLISHED_DEEPSLATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_BRICKS);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.DEEPSLATE_FRAGMENT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUFF_FRAGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRICK_FRAGMENT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STONE_FRACTURER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.IRON_FRACTURER, Models.HANDHELD);

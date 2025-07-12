@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -22,6 +23,11 @@ public class ModBlocks {
     public static final Block CRACKED_POLISHED_DEEPSLATE = registerBlock("cracked_polished_deepslate",
             new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE).hardness(3.5f)
                     .strength(6f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE)));
+    public static final Block CRACKED_BRICKS = registerBlock("cracked_bricks",
+            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS).hardness(3.5f)
+                    .strength(5f).resistance(3.5f).requiresTool().instrument(NoteBlockInstrument.BASEDRUM)));
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -38,6 +44,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.CRACKED_POLISHED_DEEPSLATE);
             entries.add(ModBlocks.CRACKED_POLISHED_TUFF);
+            entries.add(ModBlocks.CRACKED_BRICKS);
         });
     }
 }

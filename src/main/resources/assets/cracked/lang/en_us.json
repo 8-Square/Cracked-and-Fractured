@@ -5,8 +5,10 @@
 
   "item.cracked.deepslate_fragment": "Deepslate Fragment",
   "item.cracked.tuff_fragment": "Tuff Fragment",
+  "item.cracked.brick_fragment": "Brick Fragment",
 
 
   "block.cracked.cracked_polished_deepslate": "Cracked Polished Deepslate",
-  "block.cracked.cracked_polished_tuff": "Cracked Polished Tuff"
+  "block.cracked.cracked_polished_tuff": "Cracked Polished Tuff",
+  "block.cracked.cracked_bricks": "Cracked Bricks"
 }

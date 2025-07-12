@@ -1,6 +1,7 @@
 package me.foursquare.item.custom;
 
 import me.foursquare.block.ModBlocks;
+import me.foursquare.item.ModItems;
 import net.fabricmc.fabric.api.item.v1.EnchantingContext;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -24,6 +25,7 @@ public class FracturerItem extends MiningToolItem {
             Map.of(
                     Blocks.POLISHED_DEEPSLATE, ModBlocks.CRACKED_POLISHED_DEEPSLATE,
                     Blocks.POLISHED_TUFF, ModBlocks.CRACKED_POLISHED_TUFF,
+                    Blocks.BRICKS, ModBlocks.CRACKED_BRICKS,
                     Blocks.DEEPSLATE_TILES, Blocks.CRACKED_DEEPSLATE_TILES,
                     Blocks.NETHER_BRICKS, Blocks.CRACKED_NETHER_BRICKS,
                     Blocks.DEEPSLATE_BRICKS, Blocks.CRACKED_DEEPSLATE_BRICKS,
