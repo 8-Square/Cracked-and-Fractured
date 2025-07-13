@@ -1,7 +1,7 @@
 package me.foursquare.item.custom;
 
 import me.foursquare.block.ModBlocks;
-import me.foursquare.item.ModItems;
+import me.foursquare.util.ModTags;
 import net.fabricmc.fabric.api.item.v1.EnchantingContext;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -48,9 +48,27 @@ public class FracturerItem extends MiningToolItem {
 
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
+                // BRICK BLOCKS CRACKING
+                if (clickedBlock.getDefaultState().isIn(ModTags.Blocks.BRICK_BLOCKS)) {
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_TUFF_BRICKS_BREAK, SoundCategory.BLOCKS, 1f, 2f);
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_MUD_BRICKS_FALL , SoundCategory.BLOCKS);
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_NETHER_BRICKS_BREAK , SoundCategory.BLOCKS);
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_DEEPSLATE_TILES_BREAK , SoundCategory.BLOCKS);
+                }
+                // DEEPSLATE BLOCKS CRACKING
+                else if (clickedBlock.getDefaultState().isIn(ModTags.Blocks.DEEPSLATE_BLOCKS)) {
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_DEEPSLATE_BREAK,
+                            SoundCategory.BLOCKS);
+                }
+                // TUFF BLOCKS CRACKING
+                else if (clickedBlock.getDefaultState().isIn(ModTags.Blocks.TUFF_BLOCKS)) {
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_TUFF_BRICKS_BREAK, SoundCategory.BLOCKS);
 
-                world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_DEEPSLATE_BREAK,
-                        SoundCategory.BLOCKS);
+                }
+                // ANYTHING ELSE
+                else {
+                    world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_NETHER_BRICKS_BREAK, SoundCategory.BLOCKS);
+                }
 
             }
         }

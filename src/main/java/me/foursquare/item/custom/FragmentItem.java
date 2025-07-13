@@ -1,13 +1,10 @@
 package me.foursquare.item.custom;
 
 
-import me.foursquare.Cracked;
 import me.foursquare.block.ModBlocks;
 import me.foursquare.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.enums.NoteBlockInstrument;
-import net.minecraft.client.sound.Sound;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
@@ -15,7 +12,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.core.Logger;
 
 import java.util.Map;
 

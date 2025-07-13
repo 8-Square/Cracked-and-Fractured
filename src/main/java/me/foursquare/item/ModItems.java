@@ -1,21 +1,14 @@
 package me.foursquare.item;
 
 import me.foursquare.Cracked;
-import me.foursquare.block.ModBlocks;
 import me.foursquare.item.custom.FracturerItem;
 import me.foursquare.item.custom.FragmentItem;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 
-import javax.tools.Tool;
 
 public class ModItems {
     public static final Item STONE_FRACTURER = registerItem("stone_fracturer", new FracturerItem(ModToolMaterials.S_FRACTURER,
