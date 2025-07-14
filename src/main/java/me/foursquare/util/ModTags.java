@@ -14,8 +14,6 @@ public class ModTags {
         public static final TagKey<Block> DEEPSLATE_BLOCKS = createTag("deepslate_blocks");
         public static final TagKey<Block> TUFF_BLOCKS = createTag("tuff_blocks");
 
-
-
         public static final TagKey<Block> NEEDS_S_FRACTURER = createTag("needs_s_fracturer");
         public static final TagKey<Block> INCORRECT_FOR_S_FRACTURER = createTag("incorrect_for_s_fracturer");
 
@@ -31,7 +29,7 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> FRACTURED_ITEMS = createTag("fractured_items");
+        public static final TagKey<Item> BRICK_REPAIRS = createTag("brick_repairs");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(Cracked.MOD_ID, name));
