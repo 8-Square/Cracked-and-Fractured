@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cracked:brick_fragment"
+    },
+    {
+      "item": "cracked:brick_fragment"
+    },
+    {
+      "item": "cracked:brick_fragment"
+    },
+    {
+      "item": "cracked:brick_fragment"
+    }
+  ],
+  "result": {
+    "id": "minecraft:bricks",
+    "count": 1
+  }
+}

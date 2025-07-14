@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "ingredient": {
+    "item": "minecraft:bricks"
+  },
+  "result": {
+    "id": "cracked:cracked_bricks"
+  },
+  "experience": 0.2,
+  "cookingtime": 150
+}

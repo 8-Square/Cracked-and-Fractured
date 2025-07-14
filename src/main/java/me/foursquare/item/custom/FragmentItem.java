@@ -3,10 +3,13 @@ package me.foursquare.item.custom;
 
 import me.foursquare.block.ModBlocks;
 import me.foursquare.item.ModItems;
+import me.foursquare.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -78,7 +81,7 @@ public class FragmentItem extends Item {
                 return ActionResult.SUCCESS;
             }
             //BRICK FRAGMENT
-            else if (getDefaultStack().isOf(ModItems.BRICK_FRAGMENT)) {
+            else if (isValidItem(context.getStack()) || context.getStack().isOf(Items.CLAY) || context.getStack().isIn(ModTags.Items.BRICK_REPAIRS)) {
                 if (BRICK_FRAGMENTED.containsKey(clickedBlock)) {
                     world.setBlockState(pos, BRICK_FRAGMENTED.get(clickedBlock).getDefaultState());
                     world.playSound(null, pos, SoundEvents.BLOCK_DEEPSLATE_BREAK, SoundCategory.BLOCKS, 1f, 1f);
@@ -96,6 +99,10 @@ public class FragmentItem extends Item {
             }
         }
         return super.useOnBlock(context);
+    }
+
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.BRICK_REPAIRS);
     }
 }
 
